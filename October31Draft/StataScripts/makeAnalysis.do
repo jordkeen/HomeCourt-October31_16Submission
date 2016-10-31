@@ -107,15 +107,15 @@ foreach year in 2014 2015 2016 {
 		title("Normal Probability Plot")
 		subtitle("Fixed Effects Model - `year' Season")
 		saving("$graphs\residualsNormPlot`year'", replace);
-	graph export "$graphs\PDFs\residualsNormPlot`year'.pdf", replace;
-	graph export "$graphs\PNGs\residualsNormPlot`year'.png", replace;
+	graph export "$graphs\residualsNormPlot`year'.pdf", replace;
+	graph export "$graphs\residualsNormPlot`year'.png", replace;
 	
 	histogram res, 
 		title("Residuals Distribution")
 		subtitle("Fixed Effects Model - `year' Season")
 		saving("$graphs\residualsDistribution`year'", replace);
-	graph export "$graphs\PDFs\residualsDistribution`year'.pdf", replace;
-	graph export "$graphs\PNGs\residualsDistribution`year'.png", replace;
+	graph export "$graphs\residualsDistribution`year'.pdf", replace;
+	graph export "$graphs\residualsDistribution`year'.png", replace;
 	
 	//Figure 1
 	twoway 
@@ -127,8 +127,8 @@ foreach year in 2014 2015 2016 {
 		subtitle("Fixed Effects Model - `year' Season") 
 		legend(label(2 "95% Confidence Interval"))
 		saving("$graphs\predictedActualMargin`year'", replace);
-	graph export "$graphs\PDFs\predictedActualMargin`year'.pdf", replace;
-	graph export "$graphs\PNGs\predictedActualMargin`year'.png", replace;
+	graph export "$graphs\predictedActualMargin`year'.pdf", replace;
+	graph export "$graphs\predictedActualMargin`year'.png", replace;
 	
 	//Figure 2
 	twoway (scatter res hat, msize(small) msymbol(smcircle)), 
@@ -138,8 +138,8 @@ foreach year in 2014 2015 2016 {
 		title("Residual Plot")
 		subtitle("Fixed Effects Model - `year' Season") 
 		saving("$graphs\residualPlotFE`year'", replace);
-	graph export "$graphs\PDFs\residualPlotFE`year'.pdf", replace;
-	graph export "$graphs\PNGs\residualPlotFE`year'.png", replace;
+	graph export "$graphs\residualPlotFE`year'.pdf", replace;
+	graph export "$graphs\residualPlotFE`year'.png", replace;
 	
 	# delimit cr
 		
