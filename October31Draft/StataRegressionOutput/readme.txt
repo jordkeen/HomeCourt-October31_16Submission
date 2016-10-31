@@ -1,0 +1,1 @@
+This directory stores regression results from makeAnalysis.do

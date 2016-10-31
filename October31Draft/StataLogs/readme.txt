@@ -1,0 +1,1 @@
+This directory stores log files created in assembleData.do and makeAnalysis.do

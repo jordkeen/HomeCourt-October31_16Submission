@@ -1,0 +1,1 @@
+This directory stores .dta files created by assembleData.do
