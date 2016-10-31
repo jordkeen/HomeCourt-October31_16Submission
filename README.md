@@ -1,5 +1,5 @@
 # HomeCourt-October31_16Submission
-Replication Files for October 31st 2016 submission of home court advantage paper
+Replication Files for October 31st 2016 submission of writing sample on home court advantage in college basketball. 
 
 To replicate results for Table 2 and Figures 1-3 run the main.do file in the StataScripts folder
 
