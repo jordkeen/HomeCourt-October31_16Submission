@@ -1,5 +1,5 @@
 %set home directory
-cd('K:\Research\Projects\HomeCourt');
+cd('...\HomeCourt-October31_16Submission\October31Draft');
 
 %direct to Matlab directory
 cd Matlab
