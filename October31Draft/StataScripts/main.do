@@ -3,7 +3,7 @@
 //Preliminaries
 
 //set home directory
-global home "K:\Research\Projects\HomeCourt"
+global home "....\HomeCourt-October31_16Submission\October31Draft"
 
 //establish other directories
 global raw "$home\rawData"
