@@ -10,6 +10,6 @@ Table 2 comes from the file appendixRegTable.csv in StataRegressionOutput
 Figures 1-3 are in the StataGraphsFolder
 
 To replicate Table 3 and Figure 4, run the m-file winProbChange.m in the Matlab folder
-This m-file is dependent on the main.do file for data, main.do must be run first
+This m-file is dependent on the main.do file for data, so main.do must be run first
 
 
