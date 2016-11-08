@@ -9,7 +9,7 @@ cd Matlab
 clear;
 data = readtable('winProbData.xlsx');
 
-%generates figure X
+%generates figure 4
 data.winProbNeutral = 1 - normcdf(0,data.predMarginNeutral,data.stdf);
 data.winProbHome = 1 - normcdf(0,data.predMarginNeutral + data.teamHomeCoef,data.stdf);
 data.winProbChange = data.winProbHome - data.winProbNeutral;
