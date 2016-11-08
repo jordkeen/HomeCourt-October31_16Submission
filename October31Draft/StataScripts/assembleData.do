@@ -1,6 +1,7 @@
 clear
 set more off
 
+//import and clean game result data for 2014, 2015 and 2016 season
 foreach year in 2014 2015 2016 {
 
 clear
@@ -41,7 +42,7 @@ rename OpponentScore opponentScore
 gen season = `year'
 tostring season, generate(seasonStr)
 
-//add year to end of team
+//add year to end of team to make teams school-year specific
 gen team = teamSchool + seasonStr
 gen opponent = opponentSchool + seasonStr
 drop seasonStr
@@ -77,28 +78,6 @@ bysort team opponent: replace matchupCount = _N
 drop if matchupCount < 2
 bysort team opponent: assert _N == 2
 
-/*
-
-//matchup count variable
-sort team opponent date
-by team opponent: gen matchupGameNum = _n
-gen matchupFirstGame = matchupGameNum==1
-gen teamHomeFirst = matchupFirstGame * teamHome
-gen teamHomeGameNum = teamHome * matchupGameNum
-
-//restrict to two games
-
-//drop if games within each matchup is not home and home
-bysort team opponent: gen matchupCountHH = _N
-assert matchupCountHH >= 2
-by team opponent, sort: egen numberOfHome = sum(teamHome)
-drop if numberOfHome < 1
-assert matchupCountHH >= 2
-assert numberOfHome >= 1
-drop matchupCountHH
-drop numberOfHome
-drop matchupCount
-*/
 
 //variables for within matchup regression
 by team opponent, sort: egen matchupAvgMargin = mean(margin)
